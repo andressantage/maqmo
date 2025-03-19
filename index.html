@@ -158,8 +158,8 @@
                 container.innerHTML = "";
                 data.forEach(user => {
                     const row = document.createElement("tr");
-                    const truncatedDia = user.dia.length > 20 ? user.dia.substring(0, 20) + "..." : user.dia;
-                    const truncatedName = user.name.length > 20 ? user.name.substring(0, 20) + "..." : user.name;
+                    const truncatedDia = user.dia.length > 15 ? user.dia.substring(0, 15) + "..." : user.dia;
+                    const truncatedName = user.name.length > 100 ? user.name.substring(0, 100) + "..." : user.name;
                     row.innerHTML = `
                         <td class="truncate">${truncatedDia}</td>
                         <td class="truncate">${truncatedName}</td>
