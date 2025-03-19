@@ -73,7 +73,13 @@
             background-color: #3a3a3a;
         }
         .truncate {
-            max-width: 200px; /* Limita el ancho de la celda */
+            max-width: 100px; /* Limita el ancho de la celda */
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+         .truncate1 {
+            max-width: 400px; /* Limita el ancho de la celda */
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
@@ -162,7 +168,7 @@
                     const truncatedName = user.name.length > 200 ? user.name.substring(0, 200) + "..." : user.name;
                     row.innerHTML = `
                         <td class="truncate">${truncatedDia}</td>
-                        <td class="truncate">${truncatedName}</td>
+                        <td class="truncate1">${truncatedName}</td>
                         <td>
                             <button class="delete-btn" onclick="deleteData('${user.id}')">Eliminar</button>
                             <button onclick="openModal('${user.id}')">Editar</button>
